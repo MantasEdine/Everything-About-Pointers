@@ -1,11 +1,21 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
 
-prog: pointers.o utils.o
-	$(CC) $(CFLAGS) pointers.o utils.o -o prog
+# Source files
+SRCS = pointers.c utils.c heap.c
+OBJS = $(SRCS:.c=.o)
 
-prog2: heap.o
-	$(CC) $(CFLAGS) heap.o -o prog2
+# Executable names
+PROG = prog
+PROG2 = prog2
+
+all: $(PROG) $(PROG2)
+
+$(PROG): pointers.o utils.o
+	$(CC) $(CFLAGS) pointers.o utils.o -o $(PROG)
+
+$(PROG2): heap.o
+	$(CC) $(CFLAGS) heap.o -o $(PROG2)
 
 pointers.o: pointers.c
 	$(CC) $(CFLAGS) -c pointers.c
@@ -16,5 +26,10 @@ utils.o: utils.c utils.h
 heap.o: heap.c
 	$(CC) $(CFLAGS) -c heap.c
 
+# Simple test target to run the programs
+test: $(PROG) $(PROG2)
+	./$(PROG)
+	./$(PROG2)
+
 clean:
-	rm -rf *.o prog prog2
+	rm -rf *.o $(PROG) $(PROG2)
