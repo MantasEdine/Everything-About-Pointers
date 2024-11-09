@@ -1,6 +1,6 @@
-# Introduction to Pointers in C/C++
+# Everything-About-Pointers
 
-Welcome to the comprehensive guide on pointers in C and C++! This course covers everything you need to know about pointers, from the basics to advanced topics. Whether you're a beginner or an experienced programmer, this course will help you master the concept of pointers and their applications.
+Comprehensive guide on pointers in C/C++. Learn basics to advanced topics: pointer types, arithmetic, dynamic memory, function pointers, and more. Perfect for beginners and experienced programmers.
 
 ## Table of Contents
 
@@ -84,6 +84,10 @@ Callbacks are a powerful feature in C and C++ that allow you to pass functions a
 ## Memory Leak in C/C++
 
 Memory leaks occur when dynamically allocated memory is not properly freed. This section covers the basics of memory leaks, how to detect them, and how to prevent them in your programs.
+
+---
+
+We hope you find this repository helpful and informative. Happy coding!
 
 ---
 
