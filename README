@@ -1,4 +1,4 @@
-# Everything-About-Pointers
+# Everything About Pointers
 
 Comprehensive guide on pointers in C/C++. Learn basics to advanced topics: pointer types, arithmetic, dynamic memory, function pointers, and more. Perfect for beginners and experienced programmers.
 
@@ -87,11 +87,7 @@ Memory leaks occur when dynamically allocated memory is not properly freed. This
 
 ---
 
-We hope you find this repository helpful and informative. Happy coding!
-
----
-
-# Введение в указатели в C/C++
+# Всё о Указателях
 
 Добро пожаловать в подробное руководство по указателям в C и C++! Этот курс охватывает все, что вам нужно знать об указателях, от основ до передовых тем. Будь вы новичком или опытным программистом, этот курс поможет вам овладеть концепцией указателей и их применением.
 
