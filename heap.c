@@ -8,6 +8,10 @@ int main(void){
     int *p;
     p = (int*)malloc(sizeof(int)); // Memory allocated on the Heap (allocating 4 bytes for an int)
                                    // Память выделена в куче (выделяем 4 байта для int)
+    if(p == NULL){
+        perror("malloc");
+        return 1;
+    }
     
     *p = 10; // Assigning a value to the memory location pointed by p
              // Присваиваем значение по адресу, на который указывает p
@@ -52,6 +56,26 @@ int main(void){
     
     free(p); // Free the entire block of memory
              // Освобождаем весь блок памяти
+    // calloc
+// There's no real difference between malloc and calloc except that calloc has a different way of writing:
+// На самом деле нет большой разницы между malloc и calloc, кроме того, что calloc имеет другой способ записи:
 
-    return 0;
+int *t = (int*)calloc(3, sizeof(int)); // Takes two arguments: the number of elements and the size of each element
+                                       // Принимает два аргумента: количество элементов и размер каждого элемента
+// The second difference is that before initializing values, malloc will fill them with garbage values,
+// while calloc will fill them with zeros.
+// Вторая разница заключается в том, что перед инициализацией значений malloc заполнит их мусорными значениями,
+// в то время как calloc заполнит их нулями.  
+
+   // realloc 
+   // if we have a dynamically allocated block of memory and we want to change size we can use realloc 
+   int* newT = (int*)realloc(t,20);
+   if(newT == NULL){
+    perror("realloc");
+    return 1; 
+   }
+   free(t);
+
+
+return 0;
 }
