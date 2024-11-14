@@ -77,5 +77,45 @@ int *t = (int*)calloc(3, sizeof(int)); // Takes two arguments: the number of ele
    free(t);
 
 
-return 0;
+   int elements,c = 0;
+   printf("enter value of array elements : ");
+   scanf("%d",&elements);
+   int* point = (int*)calloc(elements,sizeof(n));
+   if (point == NULL){
+    perror("calloc");
+    return 1;
+   }
+   for(int i=0;i<elements;i++){
+      p[i] = ++n;
+   }
+   for (size_t i = 0; i < elements; i++)
+   {
+    printf("value of array : %d\n ",p[i]);
+   }
+   if(n<21){
+    n = 0;
+   int newElements = 0;
+   printf("you did't get to the limits enter a number > 20 ! :");
+   scanf("%d",&newElements);
+   int* newAlloc  = (int*)realloc(point,newElements);
+   if(newAlloc ==  NULL){
+    perror("realloc");
+    return 1;
+   }
+   for(int i=0;i<newElements;i++){
+      newAlloc[i] = ++n;
+   }
+   for (size_t i = 0; i < newElements; i++)
+   {
+    printf("value of array : %d\n ",newAlloc[i]);
+   }
+   free(newAlloc);
+
+   
+   }
+
+
+
+
+   return 0;
 }
